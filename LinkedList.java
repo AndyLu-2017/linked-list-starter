@@ -15,6 +15,9 @@ public class LinkedList {
 		head = null;
 	}
 	
+	/*
+	 * This method creates a new node and adds it to the head of the list.
+	 */
 	public void insertFirst(String data) {
 		Node newNode = new Node();
 		newNode.record = data;
@@ -22,66 +25,55 @@ public class LinkedList {
 		head = newNode;
 	}
 	
+	/*
+	 * This method deletes the first node in the list.
+	 */
 	public void deleteFirst() {
 		head = head.next;
 	}
 	
+	/*
+	 * This method should create a new node containing data and add it following the node 'after'.
+	 * If after is null, then it should do nothing.
+	 */
 	public void insertAfter(String data, Node after) {
-		if (after != null) {
-			Node newNode = new Node();
-			newNode.record = data;
-			newNode.next = after.next;
-			after.next = newNode;
-		}
+		// Add your code here
 	}
 	
+	/*
+	 * This method should find the node containing the string data and return a pointer to that node.
+	 * If not found, then it should return null.
+	 */
 	public Node findNode(String data) {
-		Node pointer = head;
-		while (pointer != null && !pointer.record.equals(data)) {
-			pointer = pointer.next;
-		}
-		return pointer;
+		// Add your code here
 	}
 	
+	/*
+	 * This method should delete the node trash.
+	 * If trash is null, then it does nothing.
+	 */
 	public void deleteNode(Node trash) {
-		if (trash != null) {
-			Node follower = head;
-			while (follower.next != trash) {
-				follower = follower.next;
-			}
-			follower.next = trash.next;
-		}
+		// Your code here
 	}
 	
+	/*
+	 * This method should create a new node and insert it at the end of the list.
+	 */
 	public void insertLast(String data) {
-		Node newNode = new Node();
-		newNode.record = data;
-		newNode.next = null;
-		if (head != null) {
-			Node pointer = head;
-			while (pointer.next != null) {
-				pointer = pointer.next;
-			}
-			pointer.next = newNode;
-		} else {
-			head = newNode;
-		}
+		// Your code here
 	}
 	
+	/*
+	 * This method deletes the last node in the list.
+	 * If the list is empty, then it does nothing.
+	 */
 	public void deleteLast() {
-		if (head != null) {
-			Node pointer = head;
-			while (pointer.next != null) {
-				pointer = pointer.next;
-			}
-			Node follower = head;
-			while (follower.next != pointer) {
-				follower = follower.next;
-			}
-			follower.next = null;
-		}
+		// Your code here
 	}
 	
+	/*
+	 * This method transverses the list and prints out the record in each node.
+	 */
 	public void traverseAndPrint() {
 		Node pointer = head;
 		while (pointer != null) {
