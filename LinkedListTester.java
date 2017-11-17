@@ -18,10 +18,12 @@ public class LinkedListTester {
 		list1.deleteFirst();
 		Node marker = list1.findNode("chimpanzee");
 		list1.deleteNode(marker);
-		list1.insertAfter("bonobo", marker);
 		marker = list1.findNode("baboon");
 		list1.insertAfter("bear", marker);
+		System.out.println("FIRST LIST FROM HEAD TO TAIL...");
 		list1.traverseAndPrint();
+		System.out.println("Should be: elephant -> dinosaur -> baboon ->");
+		System.out.println("bear -> alligator\n\n");
 		
 		LinkedList list2 = new LinkedList();
 		list2.insertLast("Alice");
@@ -38,7 +40,10 @@ public class LinkedListTester {
 		list2.insertAfter("John", marker);
 		marker = list2.findNode("David");
 		list2.deleteNode(marker);
+		System.out.println("SECOND LIST FROM HEAD TO TAIL...");
 		list2.traverseAndPrint();
+		System.out.println("Should be: Imogene -> Candace -> Bob ->");
+		System.out.println("Alice -> Fiona -> George -> Harry");
 	}
 
 }
